@@ -26,7 +26,7 @@ class Server {
         this.app.use('/api/comments', commentRoutes);
     }
     listen() {
-        this.app.listen(this.port, () => console.log(`🚀 Servidor en puerto ${this.port}`));
+        this.app.listen(this.port, () => console.log(`Servidor en funcionamiento ${this.port}`));
     }
 }
 export default Server;

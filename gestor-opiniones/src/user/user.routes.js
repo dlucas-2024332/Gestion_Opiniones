@@ -5,9 +5,9 @@ import { validateFields } from '../../middlewares/validate-fields.js';
 
 const router = Router();
 
-// Ejemplo de ruta para obtener el perfil del usuario autenticado
+// El perfil del usuario obteniendo el token
 router.get('/profile', [
-    validateJWT, // Primero verificamos que el token sea válido
+    validateJWT, 
     validateFields
 ], (req, res) => {
     res.json({
@@ -16,7 +16,7 @@ router.get('/profile', [
     });
 });
 
-// Ejemplo de ruta para actualizar datos (puedes expandir esto luego)
+// Para la actualizacion de los datos
 router.put('/update', [
     validateJWT,
     check('username', 'El nombre de usuario no puede estar vacío').optional().not().isEmpty(),
